@@ -12,9 +12,7 @@
 #include <iomanip>
 using namespace std;
 
-//----------
-// Make a line for Function Prototype for getListprime Here
-//----------
+void getListprime(int = 2, int = 100);
 
 int main()
 {
@@ -28,8 +26,19 @@ int main()
 	else
 		getListprime(begin);
 }
+
 void getListprime(int begin, int end)
 {
-
-	// Complete this function
+	int i, j;
+	for (i = begin; i <= end; i++) {
+		for (j = 2; j <= i; j++) {
+			if (i % j == 0){
+				break;
+			}
+		}
+		if (j == i) {
+			cout << i << " ";
+		}
+	} 
+	cout << endl;
 }
